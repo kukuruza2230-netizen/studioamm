@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AMM STUDIO — Кабинетные артефакты</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #111111;
+            --border-color: #222222;
+            --text-main: #ffffff;
+            --text-muted: #bbbbbb;
+            --accent-gold: #bba155;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-family);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0 20px;
+            border-bottom: 2px solid var(--accent-gold);
+            margin-bottom: 40px;
+        }
+        header .logo-main {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            color: #ffffff;
+            margin-bottom: 6px;
+        }
+        header .subhead {
+            font-size: 1.4rem;
+            color: #ffffff;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        header .tagline {
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            max-width: 700px;
+            margin: 4px auto 0;
+        }
+        .header-cta {
+            margin-top: 16px;
+        }
+        .header-cta .cta-button {
+            background: var(--accent-gold);
+            color: #0a0a0a;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 12px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+        .header-cta .cta-button:hover {
+            background: #a8893f;
+        }
+        .nav-anchors {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            margin: 16px 0 5px;
+            font-size: 0.8rem;
+        }
+        .nav-anchors a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+            border-bottom: 1px solid transparent;
+        }
+        .nav-anchors a:hover {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+        .greeting-block {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .greeting-block .greeting-photo {
+            flex: 0 0 200px;
+        }
+        .greeting-block .greeting-photo img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+        .greeting-block .greeting-text {
+            flex: 1;
+        }
+        .greeting-block .greeting-text p {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .greeting-block .greeting-text .greeting-strong {
+            font-weight: 400;
+            color: #ffffff;
+        }
+        .gok-block {
+            background: rgba(187, 161, 85, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 24px 30px;
+            margin-bottom: 40px;
+        }
+        .gok-block h2 {
+            color: var(--accent-gold);
+            font-weight: 400;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .gok-block p {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .gok-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+        .gok-grid .item {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 14px;
+        }
+        .gok-grid .item h4 {
+            color: var(--accent-gold);
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        .gok-grid .item p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 0;
+        }
+        .section-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 24px 30px;
+            margin-bottom: 40px;
+        }
+        .section-header {
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+            margin-bottom: 16px;
+        }
+        .section-header h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+        .section-desc {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 300;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+        .price-range {
+            color: var(--accent-gold);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .media-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: border-color 0.3s ease, transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .media-card .img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #0d0d0d;
+        }
+        .media-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .media-card .card-info {
+            padding: 12px 16px 16px 16px;
+        }
+        .media-card .card-info .card-title {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .media-card .card-info .card-cta {
+            display: inline-block;
+            color: var(--accent-gold);
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-decoration: none;
+            border-bottom: 1px solid var(--accent-gold);
+            transition: color 0.2s;
+        }
+        .media-card .card-info .card-cta:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+        }
+        .ai-note {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-style: italic;
+            border-top: 1px solid var(--border-color);
+            padding-top: 10px;
+            margin-top: 10px;
+        }
+        .ai-note .ai-badge {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            opacity: 0.8;
+        }
+        .manifesto-block {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 30px;
+            margin-bottom: 40px;
+        }
+        .manifesto-block h1 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+        .manifesto-block p {
+            color: var(--text-main);
+            font-weight: 300;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .manifesto-block .gold {
+            color: var(--accent-gold);
+        }
+        .manifesto-block .history-photo {
+            max-width: 500px;
+            margin: 16px auto;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+        }
+        .manifesto-block .history-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .manifesto-block .history-caption {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 6px 10px;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.2);
+            font-weight: 300;
+            line-height: 1.4;
+        }
+        .manifesto-block .price-block {
+            background: rgba(187, 161, 85, 0.08);
+            border-left: 3px solid var(--accent-gold);
+            padding: 14px 18px;
+            margin: 16px 0 0;
+            border-radius: 2px;
+        }
+        .manifesto-block .price-block p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        .heritage-block {
+            margin-bottom: 40px;
+        }
+        .heritage-block h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .heritage-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .heritage-card .img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #0d0d0d;
+        }
+        .heritage-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .heritage-card .card-content {
+            padding: 12px 14px 14px 14px;
+        }
+        .heritage-card .card-content .category {
+            color: var(--accent-gold);
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .heritage-card .card-content h3 {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin: 4px 0 2px 0;
+        }
+        .heritage-card .card-content .desc {
+            color: #dddddd;
+            font-weight: 300;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        .heritage-card .card-content .status-tag {
+            font-size: 0.8rem;
+            color: #cccccc;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+        .astapov-block {
+            margin-bottom: 40px;
+        }
+        .astapov-block h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+        .astapov-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .astapov-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .astapov-card .img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #0d0d0d;
+        }
+        .astapov-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .astapov-card .card-content {
+            padding: 12px 14px 14px 14px;
+        }
+        .astapov-card .card-content .category {
+            color: var(--accent-gold);
+            font-size: 0.7rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        .astapov-card .card-content h3 {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 0.95rem;
+            margin: 4px 0 2px 0;
+        }
+        .astapov-card .card-content .author {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 0.8rem;
+            margin-bottom: 4px;
+        }
+        .astapov-card .card-content .author strong {
+            color: var(--accent-gold);
+            font-weight: 400;
+        }
+        .astapov-card .card-content .desc {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            margin-bottom: 4px;
+        }
+        .astapov-card .card-content .status-tag {
+            font-size: 0.8rem;
+            color: #cccccc;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
+        }
+        .workshop-block {
+            margin-bottom: 40px;
+        }
+        .workshop-block h2 {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #ffffff;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--accent-gold);
+            padding-left: 15px;
+        }
+        .workshop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .workshop-card {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .workshop-card .img-wrapper {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: #0d0d0d;
+        }
+        .workshop-card .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .workshop-card .caption {
+            padding: 10px 12px;
+            font-size: 0.85rem;
+            color: #ffffff;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            background: rgba(0, 0, 0, 0.3);
+            font-weight: 300;
+        }
+        .b2b-audit-block {
+            background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+            border: 2px solid var(--accent-gold);
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .b2b-audit-block .logo-matveev {
+            max-width: 120px;
+            margin-bottom: 16px;
+        }
+        .b2b-audit-block h2 {
+            color: var(--accent-gold);
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+        .b2b-audit-block p {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .b2b-audit-block .price-range {
+            font-size: 1rem;
+        }
+        .contacts-block {
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-gold);
+            border-radius: 4px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contacts-block h2 {
+            color: var(--accent-gold);
+            font-weight: 400;
+            letter-spacing: 3px;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+        }
+        .contacts-block p {
+            color: var(--text-main);
+            font-weight: 300;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+        .contacts-block .contact-item {
+            display: inline-block;
+            margin: 6px 16px;
+        }
+        .contacts-block .contact-item .label {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+        .contacts-block .contact-item a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .contacts-block .contact-item a:hover {
+            color: #ffffff;
+        }
+        .contacts-block .gold-name {
+            color: var(--accent-gold);
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-weight: 300;
+        }
+        footer .logo-footer {
+            max-width: 100px;
+            margin-bottom: 6px;
+        }
+        .lightbox-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(5, 5, 5, 0.96);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .lightbox-overlay.active {
+            display: flex;
+        }
+        .lightbox-overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+        @media (max-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .heritage-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .astapov-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .workshop-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .gok-grid {
+                grid-template-columns: 1fr;
+            }
+            .greeting-block {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .greeting-block .greeting-photo {
+                flex: 0 0 auto;
+                max-width: 180px;
+            }
+            .manifesto-block {
+                padding: 20px;
+            }
+            .section-block {
+                padding: 16px;
+            }
+            header h1 {
+                font-size: 1.8rem;
+                letter-spacing: 4px;
+            }
+            header .subhead {
+                font-size: 1.1rem;
+            }
+            .contacts-block .contact-item {
+                display: block;
+                margin: 8px 0;
+            }
+            .ai-note {
+                font-size: 0.7rem;
+                flex-wrap: wrap;
+            }
+            .ai-note .ai-badge {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <img src="logo_amm_studio.jpg" alt="AMM Studio" class="logo-main" />
+        <h1>AMM STUDIO</h1>
+        <p class="subhead">Штучные кабинетные артефакты для горнодобывающих предприятий</p>
+        <p class="tagline">Проектирование и изготовление под заказ. Строгое соблюдение сроков, юридическая гарантия.</p>
+        <div class="header-cta">
+            <a href="https://t.me/Qwerty0ip" target="_blank" class="cta-button">Запросить коммерческое предложение</a>
+        </div>
+        <div class="nav-anchors">
+            <a href="#greeting">Приветствие</a>
+            <a href="#catalog">Каталог</a>
+            <a href="#heritage">Архив</a>
+            <a href="#astapov">Астапов</a>
+            <a href="#workshop">Мастерская</a>
+            <a href="#audit">Инжиниринг</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </header>
+    <div id="greeting" class="greeting-block">
+        <div class="greeting-photo">
+            <img src="manifest_captain.jpg" alt="Михаил Петрович Матвеев" />
+        </div>
+        <div class="greeting-text">
+            <p><span class="greeting-strong">Я Михаил Петрович Матвеев.</span> Рад приветствовать вас в пространстве AMM Studio.</p>
+            <p>Наша специализация — проектирование и создание штучных кабинетных артефактов и диорам для крупных промышленных предприятий. Я лично контролирую каждый этап: от эскиза до именного паспорта готового изделия. Работа ведётся конфиденциально, с соблюдением NDA.</p>
+            <p>Мы можем спроектировать и изготовить для вас артефакт, который останется в истории вашей компании.</p>
+        </div>
+    </div>
+    <div class="gok-block">
+        <h2>Для горнодобывающих предприятий</h2>
+        <p>Работаем по закрытым контрактам с соблюдением NDA. Диорамы карьеров, наградные хронометры, эксклюзивные светильники. Полная кастомизация под вашу технику, символику и региональный камень.</p>
+        <div class="gok-grid">
+            <div class="item">
+                <h4>Сроки</h4>
+                <p>От 4 до 12 недель. Фиксация даты сдачи в договоре. Личный контроль на всех этапах.</p>
+            </div>
+            <div class="item">
+                <h4>Гарантия</h4>
+                <p>5 лет на художественные изделия.</p>
+            </div>
+            <div class="item">
+                <h4>Документы</h4>
+                <p>Полный пакет закрывающих документов. Работа по официальному договору. Безналичный расчёт.</p>
+            </div>
+        </div>
+    </div>
+    <div id="catalog">
+        <!-- 1. Хронометры -->
+        <div id="section1" class="section-block">
+            <div class="section-header"><h2>1. Монументальные кабинетные хронометры</h2></div>
+            <div class="section-desc">
+                <p>Настольные часы с швейцарскими механизмами Ronda. Художественное бронзовое литьё, глубокое патинирование, выборочное золочение. Основания из натурального камня, металла или хрусталя. Индивидуальное проектирование под ваш проект.</p>
+                <p class="price-range">Стоимость — от 350 000 до 1 850 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-01.jpg" alt="Хронометр 1" /></div><div class="card-info"><div class="card-title">Хронометр 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-02.jpg" alt="Хронометр 2" /></div><div class="card-info"><div class="card-title">Хронометр 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-03.jpg" alt="Хронометр 3" /></div><div class="card-info"><div class="card-title">Хронометр 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-04.jpg" alt="Хронометр 4" /></div><div class="card-info"><div class="card-title">Хронометр 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-05.jpg" alt="Хронометр 5" /></div><div class="card-info"><div class="card-title">Хронометр 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="chronometer-06.jpg" alt="Хронометр 6" /></div><div class="card-info"><div class="card-title">Хронометр 6</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 2. Диорамы -->
+        <div id="section2" class="section-block">
+            <div class="section-header"><h2>2. Диорамы горного профиля</h2></div>
+            <div class="section-desc">
+                <p>Диорамы карьеров и обогатительных фабрик. Каждая деталь — из бронзы с ручной чеканкой, серебрением и золочение. Основания из ценных пород дерева или камня заказчика. Символ вашего предприятия в миниатюре.</p>
+                <p class="price-range">Стоимость — от 400 000 до 3 500 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-01.jpg" alt="Диорама 1" /></div><div class="card-info"><div class="card-title">Диорама 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-02.jpg" alt="Диорама 2" /></div><div class="card-info"><div class="card-title">Диорама 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-03.jpg" alt="Диорама 3" /></div><div class="card-info"><div class="card-title">Диорама 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-04.jpg" alt="Диорама 4" /></div><div class="card-info"><div class="card-title">Диорама 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-05.jpg" alt="Диорама 5" /></div><div class="card-info"><div class="card-title">Диорама 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="diorama-06.jpg" alt="Диорама 6" /></div><div class="card-info"><div class="card-title">Диорама 6</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 3. Док-станции -->
+        <div id="section3" class="section-block">
+            <div class="section-header"><h2>3. Док-станции для телефонов</h2></div>
+            <div class="section-desc">
+                <p>Настольные док-станции с беспроводной зарядкой. Корпус из латуни, бронзы или ценных пород дерева. Гравировка логотипа, герба или символики. Доступны готовые модели и индивидуальная адаптация.</p>
+                <p class="price-range">Стоимость — от 250 000 до 850 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-01.jpg" alt="Док 1" /></div><div class="card-info"><div class="card-title">Док-станция 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-02.jpg" alt="Док 2" /></div><div class="card-info"><div class="card-title">Док-станция 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-03.jpg" alt="Док 3" /></div><div class="card-info"><div class="card-title">Док-станция 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-04.jpg" alt="Док 4" /></div><div class="card-info"><div class="card-title">Док-станция 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-05.jpg" alt="Док 5" /></div><div class="card-info"><div class="card-title">Док-станция 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-06.jpg" alt="Док 6" /></div><div class="card-info"><div class="card-title">Док-станция 6</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-07.jpg" alt="Док 7" /></div><div class="card-info"><div class="card-title">Док-станция 7</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-08.jpg" alt="Док 8" /></div><div class="card-info"><div class="card-title">Док-станция 8</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-09.jpg" alt="Док 9" /></div><div class="card-info"><div class="card-title">Док-станция 9</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-10.jpg" alt="Док 10" /></div><div class="card-info"><div class="card-title">Док-станция 10</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-11.jpg" alt="Док 11" /></div><div class="card-info"><div class="card-title">Док-станция 11</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-12.jpg" alt="Док 12" /></div><div class="card-info"><div class="card-title">Док-станция 12</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-13.jpg" alt="Док 13" /></div><div class="card-info"><div class="card-title">Док-станция 13</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-14.jpg" alt="Док 14" /></div><div class="card-info"><div class="card-title">Док-станция 14</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-15.jpg" alt="Док 15" /></div><div class="card-info"><div class="card-title">Док-станция 15</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="dock-station-16.jpg" alt="Док 16" /></div><div class="card-info"><div class="card-title">Док-станция 16</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 4. Светильники -->
+        <div id="section4" class="section-block">
+            <div class="section-header"><h2>4. Авторские светильники «Серия ГОК»</h2></div>
+            <div class="section-desc">
+                <p>Настольные светильники с направленным светом. Корпус из бронзы или латуни с декорированием по желанию. Плафон в виде элементов карьерной техники или промышленной архитектуры. Подставка из дерева или камня.</p>
+                <p class="price-range">Стоимость — от 380 000 до 1 200 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="gok-lamp-01.jpg" alt="Светильник 1" /></div><div class="card-info"><div class="card-title">Светильник «Серия ГОК» 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="gok-lamp-02.jpg" alt="Светильник 2" /></div><div class="card-info"><div class="card-title">Светильник «Серия ГОК» 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="gok-lamp-03.jpg" alt="Светильник 3" /></div><div class="card-info"><div class="card-title">Светильник «Серия ГОК» 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 5. Подставки для планшетов -->
+        <div id="section5" class="section-block">
+            <div class="section-header"><h2>5. Подставки для планшетов</h2></div>
+            <div class="section-desc">
+                <p>Настольные подставки для планшетов из латуни, бронзы, ценных пород дерева с комбинацией хрусталя, янтаря, слоновой кости. Ручная обработка, мягкая подложка. Гравировка логотипа или герба. Индивидуальное проектирование под ваш проект. Флагманская модель «Индустрия и Прогресс» — от 550 000 ₽.</p>
+                <p class="price-range">Стоимость — от 250 000 до 850 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="tablet-stand-01.jpg" alt="Планшет 1" /></div><div class="card-info"><div class="card-title">Подставка для планшета 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="tablet-stand-02.jpg" alt="Планшет 2" /></div><div class="card-info"><div class="card-title">Подставка для планшета 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="tablet-stand-03.jpg" alt="Планшет 3" /></div><div class="card-info"><div class="card-title">Подставка для планшета 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="tablet-stand-04.jpg" alt="Планшет 4" /></div><div class="card-info"><div class="card-title">Подставка для планшета 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="tablet-stand-05.jpg" alt="Планшет 5" /></div><div class="card-info"><div class="card-title">Подставка для планшета 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 6. Рамки -->
+        <div id="section6" class="section-block">
+            <div class="section-header"><h2>6. Настольные геральдические рамки</h2></div>
+            <div class="section-desc">
+                <p>Рамки для портретов, гербов и корпоративных символов. Бронза или латунь, ручная чеканка, патинирование, выборочное золочение. Вставка из гравированного хрусталя или ценных пород дерева. Возможна подсветка и адаптация под любой стиль.</p>
+                <p class="price-range">Стоимость — от 150 000 до 600 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="frame-01.jpg" alt="Рамка 1" /></div><div class="card-info"><div class="card-title">Рамка 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-02.jpg" alt="Рамка 2" /></div><div class="card-info"><div class="card-title">Рамка 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-03.jpg" alt="Рамка 3" /></div><div class="card-info"><div class="card-title">Рамка 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-04.jpg" alt="Рамка 4" /></div><div class="card-info"><div class="card-title">Рамка 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-05.jpg" alt="Рамка 5" /></div><div class="card-info"><div class="card-title">Рамка 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-06.jpg" alt="Рамка 6" /></div><div class="card-info"><div class="card-title">Рамка 6</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-07.jpg" alt="Рамка 7" /></div><div class="card-info"><div class="card-title">Рамка 7</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-08.jpg" alt="Рамка 8" /></div><div class="card-info"><div class="card-title">Рамка 8</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-09.jpg" alt="Рамка 9" /></div><div class="card-info"><div class="card-title">Рамка 9</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-10.jpg" alt="Рамка 10" /></div><div class="card-info"><div class="card-title">Рамка 10</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-11.jpg" alt="Рамка 11" /></div><div class="card-info"><div class="card-title">Рамка 11</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-12.jpg" alt="Рамка 12" /></div><div class="card-info"><div class="card-title">Рамка 12</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="frame-13.jpg" alt="Рамка 13" /></div><div class="card-info"><div class="card-title">Рамка 13</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 7. Альбомы, папки, шкатулки -->
+        <div id="section7" class="section-block">
+            <div class="section-header"><h2>7. Настольные альбомы, папки и шкатулки</h2></div>
+            <div class="section-desc">
+                <p>Альбомы, папки и шкатулки из ценных пород дерева с металлическими накладками из бронзы или латуни (патинирование, золочение, серебрение). Внутренняя отделка из натуральной кожи или бархата. Установка вашего логотипа, герба или вензеля. Готовые модели и индивидуальная адаптация.</p>
+                <p class="price-range">Стоимость — от 120 000 до 450 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="album-01.jpg" alt="Альбом 1" /></div><div class="card-info"><div class="card-title">Альбом 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="album-02.jpg" alt="Альбом 2" /></div><div class="card-info"><div class="card-title">Альбом 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="album-03.jpg" alt="Альбом 3" /></div><div class="card-info"><div class="card-title">Альбом 3</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="album-04.jpg" alt="Альбом 4" /></div><div class="card-info"><div class="card-title">Альбом 4</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="album-05.jpg" alt="Альбом 5" /></div><div class="card-info"><div class="card-title">Альбом 5</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="album-06.jpg" alt="Альбом 6" /></div><div class="card-info"><div class="card-title">Альбом 6</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 8. Пасхальные яйца -->
+        <div id="section8" class="section-block">
+            <div class="section-header"><h2>8. Пасхальные яйца в стиле Фаберже</h2></div>
+            <div class="section-desc">
+                <p>Пасхальные яйца в стилях ювелирного дома Фаберже, с элементами горно-промышленной эстетики. Корпус из бронзы или латуни с ручной чеканкой, кристаллами Swarovski, золочение и серебрение. Внутри — карьерный грузовик в ювелирном исполнении. Хрустальный купол. Штучное изделие под заказ.</p>
+                <p class="price-range">Стоимость — от 1 200 000 до 4 500 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="egg_concept_01.jpg" alt="Яйцо 1" /></div><div class="card-info"><div class="card-title">Пасхальное яйцо 1</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="egg_concept_02.jpg" alt="Яйцо 2" /></div><div class="card-info"><div class="card-title">Пасхальное яйцо 2</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+
+        <!-- 9. Пластика -->
+        <div id="section9" class="section-block">
+            <div class="section-header"><h2>9. Авторская кабинетная пластика</h2></div>
+            <div class="section-desc">
+                <p>Сюжетные скульптуры по канонам академической школы. Каждая работа единственная в своём роде. Бронза, серебро, золочение, серебрение, чернение. Подставки из природного камня. Авторские работы с личным клеймом мастера.</p>
+                <p class="price-range">Стоимость — от 350 000 до 1 200 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="sculpture-02.jpg" alt="Медведица с медвежатами" /></div><div class="card-info"><div class="card-title">Медведица с медвежатами</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="sculpture-01.jpg" alt="Погонщик оленей" /></div><div class="card-info"><div class="card-title">Погонщик оленей</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+        </div>
+
+        <!-- 10. Архитектурные миниатюры -->
+        <div id="section10" class="section-block">
+            <div class="section-header"><h2>10. Кабинетные архитектурные миниатюры</h2></div>
+            <div class="section-desc">
+                <p>Миниатюрные копии знаменитых архитектурных сооружений. Бронза, серебро, природный камень, золочение, патинирование. Штучные работы, возможна мелкая серия для подарков особо отмеченным сотрудникам. Установка именной таблички. Изготовление любых памятных зданий по желанию.</p>
+                <p class="price-range">Стоимость — от 700 000 до 1 500 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="lighthouse_concept.jpg" alt="Александрийский Маяк" /></div><div class="card-info"><div class="card-title">Александрийский Маяк</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="tower_concept.jpg" alt="Водонапорная Башня" /></div><div class="card-info"><div class="card-title">Водонапорная Башня</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="swallow_nest_concept.jpg" alt="Ласточкино Гнездо" /></div><div class="card-info"><div class="card-title">Ласточкино Гнездо</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+        </div>
+
+        <!-- 11. Письменные приборы -->
+        <div id="section11" class="section-block">
+            <div class="section-header"><h2>11. Кабинетные письменные приборы</h2></div>
+            <div class="section-desc">
+                <p>Эксклюзивные наборы для рабочего стола: пресс-папье из натурального камня (малахит, яшма, змеевик), лотки для ручек и стаканы для карандашей из бронзы и латуни. Ручная чеканка, патинирование, выборочное золочение. Каждый предмет — часть ансамбля, созданного под ваш интерьер и статус. Возможно изготовление отдельных элементов или полного комплекта.</p>
+                <p class="price-range">Стоимость — от 120 000 до 450 000 ₽. Индивидуальный расчёт.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="media-card"><div class="img-wrapper"><img src="writing_set_01.jpg" alt="Письменный прибор Викторианский Биг-Бен лазурит позолоченная бронза ООО Петробронза" /></div><div class="card-info"><div class="card-title" title="Кабинетный прибор Викторианский Биг-Бен — AMM Studio">Викторианский Биг-Бен</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="writing_set_02.jpg" alt="Письменный прибор с каскадными лотками для писем Викторианский Биг-Бен неоготика" /></div><div class="card-info"><div class="card-title" title="Утилитарный кабинетный прибор Биг-Бен — ООО Петробронза">Биг-Бен (каскадные лотки)</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="writing_set_03.jpg" alt="Эксклюзивный кабинетный прибор Русский Императорский Ампир матовое серебро обсидиан" /></div><div class="card-info"><div class="card-title" title="Письменный прибор Императорский Ампир — Ленинградская школа ДПИ">Императорский Ампир</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+                <div class="media-card"><div class="img-wrapper"><img src="writing_set_04.jpg" alt="Элитный письменный прибор со шпилем и вертикальным веером для визиток обсидиан" /></div><div class="card-info"><div class="card-title" title="Эксклюзивный прибор Императорский Ампир — ООО Петробронза">Ампир (веер для визиток)</div><a href="https://t.me/Qwerty0ip" target="_blank" class="card-cta">Запросить КП</a></div></div>
+            </div>
+            <div class="ai-note"><img src="logo_amm_digital.jpg" alt="AMM Digital" class="ai-badge" /><span>AMM Digital / Концептуальная визуализация. Итоговое изделие разрабатывается индивидуально.</span></div>
+        </div>
+    </div>
+
+    <div id="manifesto" class="manifesto-block">
+        <h1>Преемственность Ленинградской школы ДПИ</h1>
+        <p>Мы создаём эксклюзивные произведения декоративно-прикладного искусства. В основе нашей работы — опыт и преемственность мастеров советской и российской реставрационной школы:</p>
+        <p><span class="gold">Пётр Трофимович Матвеев</span> — ленинградский реставратор. В 1989–1991 годах восстанавливал исторические светильники ГМЗ «Павловск». Прошёл стажировку в парижском ателье <span class="gold">«Entreprise Montagnier» (24, rue de Grenelle)</span>, где его наставником был <span class="gold">Yves Montagnier</span> — выдающийся французский бронзовщик, представитель династии мастеров, чья мастерская на rue de Grenelle известна с конца XIX века. В Ленинграде учился у <span class="gold">Николая Павловича Клочкова</span> — ювелира высочайшего уровня, чьи работы признавались аутентичными на аукционах Sotheby’s.</p>
+        <div class="history-photo">
+            <img src="manifest_history.jpg" alt="Кучумов, Пётр Трофимович Матвеев, Солдатова, Васильева" />
+            <div class="history-caption">Слева направо: Анатолий Михайлович Кучумов — хранитель Павловска; Пётр Трофимович Матвеев — реставратор; Валентина Ивановна Солдатова — мастер-позолотчик; Альбина Алексеевна Васильева — хранительница коллекции павловской бронзы.</div>
+        </div>
+        <p><span class="gold">Валентина Солдатова</span> — реставратор-позолотчик, передавшая свой опыт следующим поколениям.</p>
+        <p><span class="gold">Инна Сергеевна Павлова-Семёнова</span> — архитектор, декоратор, кандидат архитектуры, член Союза архитекторов России, призёр <span class="gold">Международного архитектурно-дизайнерского конкурса «Золотой Трезини» 2018</span>.</p>
+        <p>Наши мастера участвовали в реставрации Государственного Эрмитажа, Павловска, Екатерининского и Юсуповского дворцов. Каждое изделие создаётся вручную, без поточности и компромиссов.</p>
+        <p>Мы выпускаем строго лимитированные серии для премиум-сегмента B2B. По условиям закрытых контрактов, мы не публикуем работы без письменного согласия клиентов. Это наш принцип уважения.</p>
+        <div class="price-block">
+            <p><span class="gold">О ценах</span></p>
+            <p>У нас нет типового прайс-листа. Каждое изделие — штучный проект под вашу задачу, интерьер и пожелания. Стоимость формируется индивидуально. Для предварительной оценки напишите нам — мы сориентируем по стоимости и срокам. Коммерческое предложение готовится после утверждения ТЗ.</p>
+            <p><span class="gold">О визуализациях</span></p>
+            <p>Все представленные на сайте изображения — это концептуальные эскизы, разработанные нашими дизайнерами и инженерами. Каждый рендер — отправная точка для создания реального изделия. В процессе работы мы адаптируем форму, материалы и детали под ваш проект, интерьер и задачи. Итоговое изделие всегда уникально и выполняется вручную.</p>
+            <p><span class="gold">Мелкие серии</span></p>
+            <p>По желанию заказчика любое изделие может быть изготовлено в виде номерной серии (не более 10 экземпляров). Это идеальное решение для корпоративных подарков, наград и знаков отличия для ключевых сотрудников и партнёров.</p>
+        </div>
+    </div>
+
+    <div id="heritage" class="heritage-block">
+        <h2>Из архива мастерской. Реализованные проекты</h2>
+        <div class="heritage-grid">
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_lomonosov_view_01.jpg" alt="Памятник-бюст М.В. Ломоносову у КГИОП" /></div>
+                <div class="card-content">
+                    <span class="category">Научная реставрация OKH</span>
+                    <h3>Памятник-бюст М.В. Ломоносову</h3>
+                    <p class="desc">Санкт-Петербург, пл. Ломоносова (КГИОП). Комплексная реставрация под надзором КГИОП. Вакуумное литье, ручная чеканка, академическая защитная патина. Проект сдан гос. комиссии без замечаний.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_lomonosov_process_02.jpg" alt="Процесс реставрации бюста Ломоносова" /></div>
+                <div class="card-content">
+                    <span class="category">Научная реставрация OKH</span>
+                    <h3>Бюст Ломоносова — процесс</h3>
+                    <p class="desc">Исходное состояние бюста в цеху: фиксация дефектов, подготовка к реставрации. Кадр из архива мастерской.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_lomonosov_final_03.jpg" alt="Финальный этап реставрации бюста Ломоносова" /></div>
+                <div class="card-content">
+                    <span class="category">Научная реставрация OKH</span>
+                    <h3>Бюст Ломоносова — финал</h3>
+                    <p class="desc">Бюст Ломоносова после проведения реставрационных работ, перед установкой на постамент.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_yusupov_bouquet_process_04.jpg" alt="Процесс ручной ковки бронзового букета для Юсуповского дворца" /></div>
+                <div class="card-content">
+                    <span class="category">Дворцовая пластика</span>
+                    <h3>Букет Юсуповского дворца</h3>
+                    <p class="desc">Пётр Трофимович Матвеев воссоздал старую французскую технологию изготовления металлических букетов и вместе с сыном Михаилом Петровичем Матвеевым изготовил два букета для больших ваз Севрского фарфора в Большой ротонде Юсуповского дворца на Мойке.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_yusupov_vase_pair_05.jpg" alt="Дворцовая ваза Юсуповского дворца с бронзовым букетом" /></div>
+                <div class="card-content">
+                    <span class="category">Дворцовая пластика</span>
+                    <h3>Ваза Юсуповского дворца</h3>
+                    <p class="desc">Одна из парных ваз Юсуповского дворца с воссозданным бронзовым букетом. Севрский фарфор, ручки-грифоны. Реставрация и воссоздание утраченных элементов.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_lions_street_06.jpg" alt="Львы у Дворцового моста" /></div>
+                <div class="card-content">
+                    <span class="category">Городская пластика</span>
+                    <h3>Львы у Дворцового моста</h3>
+                    <p class="desc">Санкт-Петербург, Дворцовая пристань. Проект финансировался при поддержке организации «Воля Петербурга» (председатель Сергей Миронов) и КГИОП.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_lions_macro_07.jpg" alt="Макро-проработка льва в мастерской" /></div>
+                <div class="card-content">
+                    <span class="category">Городская пластика</span>
+                    <h3>Лев с шаром — процесс реставрации</h3>
+                    <p class="desc">Лев с шаром под техническим навесом, процесс реставрации. Кадр из архива мастерской.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_petrobronza_chandelier_08.jpg" alt="Реставрация старинной люстры" /></div>
+                <div class="card-content">
+                    <span class="category">Исторический свет</span>
+                    <h3>Люстра воссозданная по фотографии</h3>
+                    <p class="desc">Люстра воссоздана по фотографии для Лондонской квартиры. Аутентичная реплика исторического светильника.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="heritage-card">
+                <div class="img-wrapper"><img src="heritage_grand_chandelier_09.jpg" alt="Парадная люстра в историческом интерьере" /></div>
+                <div class="card-content">
+                    <span class="category">Исторический свет</span>
+                    <h3>Парадная люстра в интерьере</h3>
+                    <p class="desc">Монументальная многоярусная хрустально-бронзовая люстра в историческом интерьере. Реставрация и воссоздание дворцового освещения.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="astapov" class="astapov-block">
+        <h2>Сотрудничество с мастерами пластики</h2>
+        <div class="astapov-grid">
+            <div class="astapov-card">
+                <div class="img-wrapper"><img src="astapov_venus5.jpg" alt="Валаамская Венера №5" /></div>
+                <div class="card-content">
+                    <span class="category">АВТОРСКИЙ НАДЗОР</span>
+                    <h3>«Валаамская Венера №5» (1994)</h3>
+                    <p class="author">Автор: Сергей Астапов (Член Союза художников СПб). Скульптура была изготовлена по заказу её автора.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+            <div class="astapov-card">
+                <div class="img-wrapper"><img src="astapov_tors.jpg" alt="Скульптурная пластика Торс" /></div>
+                <div class="card-content">
+                    <span class="category">ВЫСОКОТОЧНОЕ ЛИТЬЕ</span>
+                    <h3>Скульптурная пластика «Торс»</h3>
+                    <p class="author">Автор: Сергей Астапов (Член Союза художников СПб). Скульптура была изготовлена по заказу её автора.</p>
+                    <span class="status-tag">Команда AMM Studio (преемственность: Entreprise Montagnier — Мастерская Матвеевых → ООО «Петробронза» → AMM Studio).</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="workshop" class="workshop-block">
+        <h2>Мастерская в кадрах</h2>
+        <div class="workshop-grid">
+            <div class="workshop-card"><div class="img-wrapper"><img src="workshop-01.jpg" alt="Михаил Петрович за рабочим столом" /></div><div class="caption">Кадр 1. Михаил Петрович за рабочим столом.</div></div>
+            <div class="workshop-card"><div class="img-wrapper"><img src="workshop-02.jpg" alt="Пётр Трофимович за работой" /></div><div class="caption">Кадр 2. Пётр Трофимович завершает сборку настольных бронзовых часов.</div></div>
+            <div class="workshop-card"><div class="img-wrapper"><img src="workshop-03.jpg" alt="Фрезерный цех" /></div><div class="caption">Кадр 3. Фрезерный цех. На переднем плане — отфрезерованная плита. За работой — программисты-операторы.</div></div>
+            <div class="workshop-card"><div class="img-wrapper"><img src="workshop-04.jpg" alt="Проектирование и изготовление прототипов" /></div><div class="caption">Кадр 4. Проектирование и изготовление прототипов. За работой — 3D-моделлер.</div></div>
+        </div>
+    </div>
+
+    <div id="audit" class="b2b-audit-block">
+        <img src="logo_matveev_workshop.jpg" alt="Matveev Workshop" class="logo-matveev" />
+        <h2>Инженерный Фундамент Matveev Workshop</h2>
+        <p>Если у вас есть проект, разработанный архитектором или дизайнером, мы проводим техническую экспертизу документации. Если документация отсутствует — наши инженеры помогут создать её.</p>
+        <p>Почему это важно: проект, который выглядит красиво на бумаге, может оказаться неисполнимым в металле. Мы проверяем технологичность, усадку металлов, собираемость узлов и соответствие ГОСТ. Это позволяет избежать переделок и срыва сроков.</p>
+        <p>Далее — 3D-моделирование, адаптация под принтер, печать выплавляемым полимером и передача в литейный цех для финишной отливки.</p>
+        <p><strong>Стоимость комплексной задачи — <span class="price-range">от 250 000 ₽</span>.</strong></p>
+    </div>
+
+    <div id="contacts" class="contacts-block">
+        <h2>Руководитель студии</h2>
+        <p><span class="gold-name">Михаил Петрович Матвеев</span></p>
+        <div>
+            <div class="contact-item">
+                <span class="label">Telegram</span>
+                <a href="https://t.me/Qwerty0ip" target="_blank">Написать</a>
+            </div>
+            <div class="contact-item">
+                <span class="label">Телефон</span>
+                <a href="tel:+79531479931">+7 (953) 147-99-31</a>
+            </div>
+            <div class="contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:Fenixart@yandex.ru">Fenixart@yandex.ru</a>
+            </div>
+        </div>
+        <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">Встречи — по предварительной договорённости для верифицированных клиентов.</p>
+    </div>
+
+    <footer>
+        <img src="logo_amm_studio.jpg" alt="AMM Studio" class="logo-footer" />
+        <p>© 2026 AMM STUDIO &amp; MATVEEV WORKSHOP. Все права защищены. Конфиденциально (NDA).</p>
+    </footer>
+</div>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="" />
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.add('active');
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+        document.getElementById('lightbox-img').src = '';
+    }
+    document.querySelectorAll('.media-card .img-wrapper img, .heritage-card .img-wrapper img, .astapov-card .img-wrapper img, .workshop-card .img-wrapper img').forEach(function(img) {
+        img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            openLightbox(this.src);
+        });
+    });
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeLightbox();
+    });
+</script>
+
+</body>
+</html>
